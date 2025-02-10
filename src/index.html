@@ -1,0 +1,74 @@
+<!--
+SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
+
+SPDX-License-Identifier: CC0-1.0
+-->
+
+<!-- Example of how you implement a webcomponent in a website -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Hello World!</title>
+</head>
+
+<body>
+
+  <h1>Web Component - Boilerplate & Helloworld</h1>
+
+  Code Snippet:
+  <pre><code>
+    &lt;script type="module" src="./app.esm.js"&gt;&lt;/script&gt;
+    &lt;script nomodule src="./app.js"&gt;&lt;/script&gt;
+
+    &lt;hello-world name="Hello World!"&gt;&lt;/hello-world&gt;
+  </code></pre>
+
+
+  Output:
+  <script type="module" src="./noi-a22-air-quality.esm.js"></script>
+  <script nomodule src="./noi-a22-air-quality.js"></script>
+
+  <!-- Set the attribute "title" and refer to it as property in JS -->
+  <hello-world name="Hello World!"></hello-world>
+
+  <style>
+    hello-world {
+      font-family: "Roboto", serif;
+      outline: 1px solid red;
+      display: block;
+    }
+
+    hello-world.dark {
+      font-family: cursive;
+      outline: 1px solid red;
+
+      --color-primary: rgb(224, 224, 224);
+      --color-secondary: rgb(224, 224, 224);
+      --color-text: #EEE;
+      --color-background: #333;
+      --color-border: #DDD;
+
+      --color-busy-regular: #159b60;
+      --color-busy-light: #6c9a0b;
+      --color-busy-severe: #9a720a;
+      --color-busy-heavy: #9a4c1a;
+      --color-busy-critical: #9a1322;
+      --color-busy-empty: #4c4c4c;
+      --color-busy-empty-contrast: #FFFFFF;
+
+      --color-car-light: #18a767;
+      --color-car-heavy: #FF7F2C;
+      --color-car-handle: #EEE;
+
+      --scrollbar-color: #777;
+      --scrollbar-bg: #444;
+    }
+  </style>
+
+</body>
+
+</html>
