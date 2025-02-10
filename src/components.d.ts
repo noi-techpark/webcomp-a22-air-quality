@@ -30,6 +30,10 @@ export namespace Components {
          */
         "layout": ViewLayout;
         /**
+          * Hides legend threshold values
+         */
+        "legendHideThreshold": boolean;
+        /**
           * Reload camera data
          */
         "refreshData": () => Promise<void>;
@@ -259,6 +263,10 @@ declare namespace LocalJSX {
           * Layout appearance
          */
         "layout"?: ViewLayout;
+        /**
+          * Hides legend threshold values
+         */
+        "legendHideThreshold"?: boolean;
     }
     /**
      * (INTERNAL) part of 'noi-a22-air-quality'
