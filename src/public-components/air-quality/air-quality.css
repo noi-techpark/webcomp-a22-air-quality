@@ -1,0 +1,350 @@
+/*
+ * SPDX-FileCopyrightText: 2025 NOI Techpark <digital@noi.bz.it>
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+:host {
+
+  /**
+   * @prop --color-primary: Primary color
+   */
+  --color-primary: #0068B4;
+  /**
+   * @prop --color-primary-rgb: Primary color in RGB format
+   */
+  --color-primary-rgb: 0, 104, 180;
+  /**
+   * @prop --color-secondary: Secondary color
+   */
+  --color-secondary: #00A767;
+  /**
+   * @prop --color-tertiary: Third color
+   */
+  --color-tertiary: #6792AA;
+
+  /**
+   * @prop --color-text: Text color
+   */
+  --color-text: #333333;
+  /**
+   * @prop --color-background: Background color
+   */
+  --color-background: #FFFFFF;
+  /**
+   * @prop --color-footer: Footer color
+   */
+  --color-footer: #0068B4;
+
+  /**
+   * @prop --map-line-color: Map line color
+   */
+  --map-line-color: #3a9c77;
+
+
+  /**
+   * @prop --color-air-very-good: Color for 'very good' air quality
+   */
+  --color-air-very-good: #04F42C;
+  /**
+   * @prop --color-air-very-good-contrast: Contrast color for 'very good' air quality
+   */
+  --color-air-very-good-contrast: #333333;
+
+  /**
+   * @prop --color-air-good: Color for 'good' air quality
+   */
+  --color-air-good: #ECED1F;
+  /**
+   * @prop --color-air-good-contrast: Contrast color for 'good' air quality
+   */
+  --color-air-good-contrast: #333333;
+
+  /**
+   * @prop --color-air-pretty-good: Color for 'pretty good' air quality
+   */
+  --color-air-pretty-good: #FF7F2C;
+  /**
+   * @prop --color-air-pretty-good-contrast: Contrast color for 'pretty good' air quality
+   */
+  --color-air-pretty-good-contrast: #FFFFFF;
+
+  /**
+   * @prop --color-air-bad: Color for 'bad' air quality
+   */
+  --color-air-bad: #D375F8;
+  /**
+   * @prop ---color-air-bad-contrast: Contrast color for 'bad' air quality
+   */
+  --color-air-bad-contrast: #FFFFFF;
+
+  /**
+   * @prop --color-air-very-bad: Color for 'very bad' air quality
+   */
+  --color-air-very-bad: #FF1731;
+  /**
+   * @prop ---color-air-very-bad-contrast: Contrast color for 'very bad' air quality
+   */
+  --color-air-very-bad-contrast: #FFFFFF;
+
+  /**
+   * @prop --color-air-unknown: Color for unknown/missing air quality
+   */
+  --color-air-unknown: #A1A1A1;
+
+  /**
+   * @prop --scrollbar-color: Scrollbar thumb color
+   */
+  --scrollbar-color: initial;
+  /**
+   * @prop --scrollbar-bg: Scrollbar background color
+   */
+  --scrollbar-bg: initial;
+}
+
+:host {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: inherit;
+  min-height: 600px;
+
+  background: var(--color-background);
+}
+
+:host(.layout--mobile) .layout__content {
+  flex-direction: column-reverse;
+}
+
+.layout__content {
+  flex: 1;
+
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.layout__list {
+  flex: 0 0 350px;
+}
+
+:host(.layout--mobile) .layout__list {
+  flex: 0 0 auto;
+}
+
+.layout__center {
+  position: relative;
+  flex: 1;
+}
+
+.layout__footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+
+/** MAP **/
+noi-map {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-container {
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: 0;
+
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  line-height: 1;
+}
+
+.leaflet-popup-tip-container {
+  margin-top: -2px;
+}
+
+.leaflet-popup-tip {
+  border: 2px solid var(--color-primary);
+  margin: -12px auto 0;
+  background: var(--color-background);
+}
+
+/** POPUP **/
+.popup {
+  height: 100%;
+  box-sizing: border-box;
+  /*padding: 20px;*/
+  background: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.popup__title {
+  font-weight: 500;
+  font-size: 1em;
+
+  display: flex;
+  align-items: stretch;
+  /*gap: 8px;*/
+}
+
+.popup__title-text {
+  padding: 4px 8px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.popup__title-box {
+  width: 50px;
+  min-height: 50px;
+  background: currentColor;
+}
+
+.popup__values {
+  font-size: 0.75em;
+  padding: 8px;
+}
+
+.popup__values-label {
+  color: var(--color-tertiary);
+}
+
+.popup__values-value {
+  color: var(--color-secondary);
+}
+
+.popup__date {
+  font-size: 0.75em;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5ch;
+  white-space: nowrap;
+  margin-right: 20px; /* this helps to fix leaflet popup size, as embedded margins are removed */
+  color: var(--color-tertiary);
+}
+
+.popup__date noi-icon {
+  flex-shrink: 0;
+}
+
+.popup__border {
+  border-bottom: 1px solid var(--color-primary);
+}
+
+/** Map **/
+.noi-map-line {
+  stroke: var(--map-line-color);
+  stroke-width: 5px;
+}
+
+.noi-marker {
+  line-height: 0;
+  font-size: 1em;
+  background: currentColor;
+  /*position: relative; < affects icon position */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noi-marker noi-icon {
+  color: #0068B4;
+}
+
+/*
+.noi-marker.selected .noi-marker__label {
+  background-color: var(--map-marker-color);
+  color: var(--map-marker-color-bg);
+}
+ */
+
+/** footer **/
+.legend {
+  padding: 8px 12px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  background: var(--color-footer);
+  color: var(--color-text);
+}
+
+.legend__item {
+  padding: 4px;
+  background: currentColor;
+  display: flex;
+  min-height: 1em;
+
+  align-items: center;
+  /* text-align: center; */
+  justify-content: center;
+}
+
+.legend__item-content {
+  text-align: center;
+}
+
+:host(.layout--mobile) .legend__item-content {
+  display: none;
+}
+
+/** air quality **/
+.air-quality--0 {
+  color: var(--color-air-unknown);
+}
+
+.air-quality--1 {
+  color: var(--color-air-very-good);
+}
+
+.air-quality--2 {
+  color: var(--color-air-good);
+}
+
+.air-quality--3 {
+  color: var(--color-air-pretty-good);
+}
+
+.air-quality--4 {
+  color: var(--color-air-bad);
+}
+
+.air-quality--5 {
+  color: var(--color-air-very-bad);
+}
+
+/** air quality contrast **/
+.air-quality-contrast--1 {
+  color: var(--color-air-very-good-contrast);
+}
+
+.air-quality-contrast--2 {
+  color: var(--color-air-good-contrast);
+}
+
+.air-quality-contrast--3 {
+  color: var(--color-air-pretty-good-contrast);
+}
+
+.air-quality-contrast--4 {
+  color: var(--color-air-bad-contrast);
+}
+
+.air-quality-contrast--5 {
+  color: var(--color-air-very-bad-contrast);
+}
