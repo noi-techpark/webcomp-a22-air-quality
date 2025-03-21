@@ -40,7 +40,8 @@ export class AirQualityUtils {
    *
    */
   static getLevel(level: AirQualityLevel): AirQualityShortValue {
-    switch (level) {
+    const levelNormalized = (level || '').trim().toLowerCase().replace(/\s+/g, ' ') as AirQualityLevel;
+    switch (levelNormalized) {
       case "very good":
         return AirQualityShortValue.VERY_GOOD;
       case "good":
@@ -52,7 +53,7 @@ export class AirQualityUtils {
       case "very bad":
         return AirQualityShortValue.VERY_BAD;
       default:
-        console.error('Unknown level', level);
+        console.warn('Unknown level', level);
         return AirQualityShortValue.UNKNOWN;
     }
 
@@ -69,6 +70,9 @@ export class AirQualityUtils {
    *
    */
   static formatDate(date: Date): string {
+    if ( !date.getTime() && date.getTime() !== 0) {
+      return "Invalid date";
+    }
     const d = date.getDate();
     const m = date.getMonth() + 1;
     const y = date.getFullYear();
