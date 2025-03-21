@@ -1,10 +1,10 @@
 {
-  "title": "Hello-world",
-  "shortName": "hello-world-2",
-  "description": "Hello world simple webcomp example",
-  "descriptionAbstract": "Hello world simple webcomp example",
+  "title": "Air quality",
+  "shortName": "noi-a22-air-quality",
+  "description": "A responsive webcomponent for showing air quality on Brennerlec A22 road",
+  "descriptionAbstract": "A responsive webcomponent for showing air quality on Brennerlec A22 road",
   "license": "AGPL-3.0-or-later",
-  "repositoryUrl": "https://your-repository.git",
+  "repositoryUrl": "https://github.com/noi-techpark/webcomponents-a22-air-quality.git",
   "copyrightHolders": [
     {
       "name": "NOI",
@@ -15,32 +15,73 @@
   ],
   "authors": [
     {
-      "name": "...",
-      "email": "...",
-      "organization": "...",
-      "organizationUrl": "..."
+      "name": "NOI",
+      "email": "digital@noi.bz.it",
+      "organization": "NOI S.p.A",
+      "organizationUrl": "https://noi.bz.it"
+    },
+    {
+      "name": "Solhea",
+      "email": "info@solhea.com",
+      "organization": "Solhea S.R.L.",
+      "organizationUrl": "https://solhea.com"
     }
   ],
   "image": "wcs-logo.png",
   "searchTags": [],
   "dist": {
-    "basePath": "dist",
+    "basePath": "dist/bundle/noi-a22-air-quality",
     "files": [
-      "webcomp-boilerplate.min.js"
+      "noi-a22-air-quality.js",
+      "data_a22-1km.json",
+      "i18n_en.json",
+      "i18n_it.json"
     ],
     "scripts": [
+      {
+        "file": "noi-a22-air-quality.js",
+        "parameter": "type='module'"
+      }
     ]
   },
   "configuration": {
-    "tagName": "hello-world",
+    "tagName": "noi-a22-air-quality",
     "options": [
       {
-        "key": "title",
-        "type": "text",
-        "label": "title of the web-comp",
+        "key": "layout",
+        "type": "select",
+        "label": "Layout appearance",
         "required": false,
         "options": {
-          "default": "hello-world"
+          "values": [
+            "desktop",
+            "tablet",
+            "mobile",
+            "auto"
+          ],
+          "default": "auto"
+        }
+      },
+      {
+        "key": "language",
+        "type": "select",
+        "label": "Two letter key for the language to be used, if omitted the widget will use the browser language. Fallback is `en`",
+        "required": false,
+        "options": {
+          "values": [
+            "en",
+            "it"
+          ],
+          "default": "en"
+        }
+      },
+      {
+        "key": "style",
+        "type": "text",
+        "label": "CSS style definition",
+        "required": false,
+        "options": {
+          "default": "--color-primary: #0068B4; --color-primary-rgb: 0, 104, 180; --color-secondary: #00A767; --color-tertiary: #6792AA; --color-text: #333333; --color-background: #FFFFFF; --color-footer: #0068B4; --map-line-color: #3a9c77; --color-air-very-good: #04F42C; --color-air-very-good-contrast: #333333; --color-air-good: #ECED1F; --color-air-good-contrast: #333333; --color-air-pretty-good: #FF7F2C; --color-air-pretty-good-contrast: #FFFFFF; --color-air-bad: #D375F8; --color-air-bad-contrast: #FFFFFF; --color-air-very-bad: #FF1731; --color-air-very-bad-contrast: #FFFFFF; --color-air-unknown: #A1A1A1; --scrollbar-color: initial; --scrollbar-bg: initial; "
         }
       }
     ]
