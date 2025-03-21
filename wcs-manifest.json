@@ -4,7 +4,7 @@
   "description": "A responsive webcomponent for showing air quality on Brennerlec A22 road",
   "descriptionAbstract": "A responsive webcomponent for showing air quality on Brennerlec A22 road",
   "license": "AGPL-3.0-or-later",
-  "repositoryUrl": "https://github.com/noi-techpark/webcomponents-a22-air-quality.git",
+  "repositoryUrl": "https://github.com/noi-techpark/webcomp-a22-air-quality.git",
   "copyrightHolders": [
     {
       "name": "NOI",
@@ -55,7 +55,6 @@
         "options": {
           "values": [
             "desktop",
-            "tablet",
             "mobile",
             "auto"
           ],

@@ -1,5 +1,5 @@
 {
-  "name": "webcomponents-a22-air-quality",
+  "name": "webcomp-a22-air-quality",
   "private": true,
   "scripts": {
     "build": "stencil build --config stencil.config.ts --prod",
