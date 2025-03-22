@@ -33,7 +33,7 @@
     "basePath": "dist/bundle/noi-a22-air-quality",
     "files": [
       "noi-a22-air-quality.js",
-      "data_a22-1km.json",
+      "data_a22.json",
       "i18n_en.json",
       "i18n_it.json"
     ],

@@ -34,7 +34,7 @@ export class AirQualityDataService {
   }
 
   getRoutePath() {
-    const dataPath = getAssetPath('data_a22-1km.json');
+    const dataPath = getAssetPath('data_a22.json');
     // console.log('[WebcamDataService] dataPath', dataPath);
     return fetch(dataPath)
       .then(r => r.json() as Promise<Array<{ lat: number, lng: number }>>);

@@ -5,7 +5,7 @@
     "outputDir": "dist/bundle/noi-a22-air-quality",
     "copy": [
       {
-        "src": "assets/data_a22-1km.json",
+        "src": "assets/data_a22.json",
         "dst": "."
       },
       {
