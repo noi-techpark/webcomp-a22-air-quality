@@ -1,0 +1,123 @@
+<!--
+SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
+
+SPDX-License-Identifier: CC0-1.0
+-->
+
+<!-- Example of how you implement a webcomponent in a website -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Hello World!</title>
+</head>
+
+<body>
+
+  <h1>Web Component - Boilerplate & Helloworld</h1>
+
+  Code Snippet:
+  <pre><code>
+    &lt;script type="module" src="./app.esm.js"&gt;&lt;/script&gt;
+    &lt;script nomodule src="./app.js"&gt;&lt;/script&gt;
+
+    &lt;noi-a22-air-quality&gt;&lt;/noi-a22-air-quality&gt;
+  </code></pre>
+
+
+  Output:
+  <script type="module" src="./noi-a22-air-quality.esm.js"></script>
+  <script nomodule src="./noi-a22-air-quality.js"></script>
+
+  <!-- Set the attribute "title" and refer to it as property in JS -->
+  <div style="display: flex; justify-content: center">
+    <noi-a22-air-quality id="acqua" style="height: 600px"></noi-a22-air-quality>
+  </div>
+
+
+  <div>
+    <button onclick="acqua.style.width = '500px'">size mobile</button>
+    <button onclick="acqua.style.width = '890px'">size tablet</button>
+    <button onclick="acqua.style.width = '100%'">size full</button>
+    <button onclick="acqua.layout = 'mobile'">layout mobile</button>
+    <button onclick="acqua.layout = 'tablet'">layout tablet</button>
+    <button onclick="acqua.layout = 'desktop'">layout desktop</button>
+    <button onclick="acqua.layout = 'auto'">layout auto</button>
+    <button onclick="acqua.language = 'en'">lang: en</button>
+    <button onclick="acqua.language = 'it'">lang: it</button>
+    <button onclick="acqua.language = 'xx'">lang: xx (missing)</button>
+    <button onclick="acqua.language = null">lang: auto</button>
+    <button onclick="acqua.classList.remove('dark')">styles: default</button>
+    <button onclick="acqua.classList.add('dark')">styles: dark mode</button>
+
+    <script>
+      function changeFontSize(change) {
+        const currentSize = parseInt(acqua.style.fontSize || '16px', 10);
+        acqua.style.fontSize = (currentSize + change) + 'px';
+      }
+    </script>
+    <button onclick="changeFontSize(-1)">font -</button>
+    <button onclick="changeFontSize(1)">font +</button>
+  </div>
+
+  <!-- Roboto font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+  <style>
+    noi-a22-air-quality {
+      font-family: "Roboto", serif;
+      outline: 1px solid red;
+    }
+
+    noi-a22-air-quality.dark {
+      font-family: cursive;
+      outline: 1px solid red;
+
+      --color-primary: rgb(224, 224, 224);
+      --color-secondary: rgb(224, 224, 224);
+      --color-text: #EEE;
+      --color-background: #333;
+
+      --map-line-color: #5d8d58;
+
+      --map-filter: grayscale(100%) invert(1);
+
+      --scrollbar-color: #CCC;
+      --scrollbar-bg: #333;
+
+      --color-air-very-good: #159b60;
+      --color-air-very-good-contrast: #EEE;
+
+      --color-air-good: #6c9a0b;
+      --color-air-good-contrast: #EEE;
+
+      --color-air-pretty-good: #9a720a;
+      --color-air-pretty-good-contrast: #EEE;
+
+      --color-air-bad: #9a4c1a;
+      --color-air-bad-contrast: #EEE;
+
+      --color-air-very-bad: #9a1322;
+      --color-air-very-bad-contrast: #EEE;
+    }
+
+    noi-a22-air-quality.dark::part(marker){
+      background: #333;
+
+      border: 1px solid currentColor;
+      border-radius: 50%;
+    }
+    noi-a22-air-quality.dark::part(marker-icon){
+      color: currentColor;
+    }
+  </style>
+
+</body>
+
+</html>
