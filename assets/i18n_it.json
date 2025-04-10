@@ -1,0 +1,13 @@
+{
+  "app.list.title": "Stazioni di rilevamento",
+  "app.list.search.placeholder": "Cerca",
+  "app.list.empty": "Nessun dato",
+  "app.parameter.no2": "NO2",
+  "app.measureTime": "Rilevato",
+  "app.air.quality--0": "Sconosciuto",
+  "app.air.quality--1": "Molto buono",
+  "app.air.quality--2": "Buono",
+  "app.air.quality--3": "Abbastanza buono",
+  "app.air.quality--4": "Cattivo",
+  "app.air.quality--5": "Molto cattivo"
+}

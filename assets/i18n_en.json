@@ -1,0 +1,13 @@
+{
+  "app.list.title": "Detection Stations",
+  "app.list.search.placeholder": "Search",
+  "app.list.empty": "No data",
+  "app.parameter.no2": "NO2",
+  "app.measureTime": "Detected",
+  "app.air.quality--0": "Unknown",
+  "app.air.quality--1": "Very good",
+  "app.air.quality--2": "Good",
+  "app.air.quality--3": "Pretty good",
+  "app.air.quality--4": "Bad",
+  "app.air.quality--5": "Very bad"
+}
