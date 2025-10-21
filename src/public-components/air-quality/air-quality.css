@@ -264,7 +264,11 @@ noi-map {
 .noi-marker {
   line-height: 0;
   font-size: 1em;
+  height: 24px;
+  width: 24px;
   background: currentColor;
+  border-radius: 50%;
+  border: 2px solid var(--color-background);
   /*position: relative; < affects icon position */
 
   display: flex;
@@ -273,7 +277,8 @@ noi-map {
 }
 
 .noi-marker noi-icon {
-  color: #0068B4;
+  /*color: #0068B4;*/
+  color: currentColor;
 }
 
 /*

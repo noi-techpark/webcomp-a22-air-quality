@@ -14,12 +14,14 @@ export class AirQualityUtils {
   static convertToShortInfo(dataArr: AirQuality_Flat[]): AirQualityShort[] {
     const shortArr: AirQualityShort[] = [];
     for (const item of dataArr) {
+      const idx = dataArr.indexOf(item);
       shortArr.push({
         scode: item.scode,
         sname: AirQualityUtils.normalizeName(item.sname),
         tdescription: item.tdescription,
         mvalue: item.mvalue,
-        value: AirQualityUtils.getLevel(item.mvalue),
+        // value: AirQualityUtils.getLevel(item.mvalue),
+        value: idx % 6 + 1,
         mvalidtime: item.mvalidtime,
         validtime: new Date(item.mvalidtime),
         validtimeLocalized: AirQualityUtils.formatDate(new Date(item.mvalidtime)),
