@@ -278,7 +278,7 @@ noi-map {
 .legend {
   padding: 8px 12px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   background: var(--color-footer);
   color: var(--color-text);
@@ -328,6 +328,10 @@ noi-map {
   color: var(--color-air-very-bad);
 }
 
+.air-quality--6 {
+  color: var(--color-air-very-bad);
+}
+
 /** air quality contrast **/
 .air-quality-contrast--1 {
   color: var(--color-air-very-good-contrast);
@@ -346,5 +350,9 @@ noi-map {
 }
 
 .air-quality-contrast--5 {
+  color: var(--color-air-very-bad-contrast);
+}
+
+.air-quality-contrast--6 {
   color: var(--color-air-very-bad-contrast);
 }
