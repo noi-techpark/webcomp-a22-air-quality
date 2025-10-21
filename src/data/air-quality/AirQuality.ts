@@ -4,5 +4,5 @@
 
 import { Datatype, Measurement, Provenance, Station } from "./api-types";
 
-export type AirQualityLevel = "very good" | "good" | "pretty good" | "bad" | "very bad";
+export type AirQualityLevel = "good" | "fair" | "moderate" | "poor" | "very poor" | "extremely poor";
 export type AirQuality_Flat = Datatype & Measurement<AirQualityLevel> & Provenance & Station;

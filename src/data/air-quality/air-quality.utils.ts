@@ -40,18 +40,22 @@ export class AirQualityUtils {
    *
    */
   static getLevel(level: AirQualityLevel): AirQualityShortValue {
-    const levelNormalized = (level || '').trim().toLowerCase().replace(/\s+/g, ' ') as AirQualityLevel;
+    const levelNormalized = (level || '').trim()
+      .toLowerCase()
+      .replace(/\s+/g, ' ') as AirQualityLevel;
     switch (levelNormalized) {
-      case "very good":
-        return AirQualityShortValue.VERY_GOOD;
       case "good":
         return AirQualityShortValue.GOOD;
-      case "pretty good":
-        return AirQualityShortValue.PRETTY_GOOD;
-      case "bad":
-        return AirQualityShortValue.BAD;
-      case "very bad":
-        return AirQualityShortValue.VERY_BAD;
+      case "fair":
+        return AirQualityShortValue.FAIR;
+      case "moderate":
+        return AirQualityShortValue.MODERATE;
+      case "poor":
+        return AirQualityShortValue.POOR;
+      case "very poor":
+        return AirQualityShortValue.VERY_POOR;
+      case "extremely poor":
+        return AirQualityShortValue.EXTREMELY_POOR;
       default:
         console.warn('Unknown level', level);
         return AirQualityShortValue.UNKNOWN;
