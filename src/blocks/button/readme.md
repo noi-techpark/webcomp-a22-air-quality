@@ -50,13 +50,11 @@ SPDX-License-Identifier: CC0-1.0
 
 ### Used by
 
- - [noi-brennerlec](../../road-webcam)
  - [noi-input](../input)
 
 ### Graph
 ```mermaid
 graph TD;
-  noi-brennerlec --> noi-button
   noi-input --> noi-button
   style noi-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

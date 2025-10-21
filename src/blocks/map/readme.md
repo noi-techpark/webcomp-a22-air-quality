@@ -24,22 +24,24 @@ SPDX-License-Identifier: CC0-1.0
 
 ## CSS Custom Properties
 
-| Name           | Description |
-| -------------- | ----------- |
-| `--map-filter` | Map filter  |
+| Name                 | Description          |
+| -------------------- | -------------------- |
+| `--color-background` | Map background color |
+| `--color-primary`    | Link text color      |
+| `--map-filter`       | Map filter           |
 
 
 ## Dependencies
 
 ### Used by
 
- - [noi-brennerlec](../../road-webcam)
+ - [noi-a22-air-quality](../../public-components/air-quality)
 
 ### Graph
 ```mermaid
 graph TD;
-  noi-brennerlec --> noi-brennerlec-map
-  style noi-brennerlec-map fill:#f9f,stroke:#333,stroke-width:4px
+  noi-a22-air-quality --> noi-map
+  style noi-map fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

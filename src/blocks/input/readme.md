@@ -52,7 +52,7 @@ Prefix are hardcoded to 'search' icon for now.
 
 ### Used by
 
- - [noi-road-webcam-list](../../road-webcam/partials/road-webcam-list)
+ - [noi-air-quality-list](../../public-components/air-quality/partials/air-quality-list)
 
 ### Depends on
 
@@ -64,7 +64,7 @@ Prefix are hardcoded to 'search' icon for now.
 graph TD;
   noi-input --> noi-icon
   noi-input --> noi-button
-  noi-road-webcam-list --> noi-input
+  noi-air-quality-list --> noi-input
   style noi-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

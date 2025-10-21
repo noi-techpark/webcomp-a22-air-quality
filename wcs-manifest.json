@@ -80,7 +80,7 @@
         "label": "CSS style definition",
         "required": false,
         "options": {
-          "default": "--color-primary: #0068B4; --color-primary-rgb: 0, 104, 180; --color-secondary: #00A767; --color-tertiary: #6792AA; --color-text: #333333; --color-background: #FFFFFF; --color-footer: #0068B4; --map-line-color: #3a9c77; --color-air-very-good: #04F42C; --color-air-very-good-contrast: #333333; --color-air-good: #ECED1F; --color-air-good-contrast: #333333; --color-air-pretty-good: #FF7F2C; --color-air-pretty-good-contrast: #FFFFFF; --color-air-bad: #D375F8; --color-air-bad-contrast: #FFFFFF; --color-air-very-bad: #FF1731; --color-air-very-bad-contrast: #FFFFFF; --color-air-unknown: #A1A1A1; --scrollbar-color: initial; --scrollbar-bg: initial; "
+          "default": "--color-primary: #0068B4; --color-primary-rgb: 0, 104, 180; --color-secondary: #00A767; --color-tertiary: #6792AA; --color-text: #333333; --color-background: #FFFFFF; --color-footer: #0068B4; --map-line-color: #3a9c77;   --color-air-good: #50f0e6; --color-air-good-contrast: #333333; --color-air-fair: #50ccaa; --color-air-fair-contrast: #EEE; --color-air-moderate: #f0e641; --color-air-moderate-contrast: #333333; --color-air-poor: #ff5050; --color-air-poor-contrast: #EEE; --color-air-very-poor: #960032; --color-air-very-poor-contrast: #EEE; --color-air-extremely-poor: #7d2181; --color-air-extremely-poor-contrast: #EEE; --color-air-unknown: #A1A1A1; --scrollbar-color: initial; --scrollbar-bg: initial; "
         }
       }
     ]
