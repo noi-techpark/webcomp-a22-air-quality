@@ -10,6 +10,9 @@ export interface Datatype {
   tunit: string;
   ttype: string;
   tdescription: string;
+  /**
+   * Important: Nested objects are not available when you use flat as representation, refer to them directly instead.
+   */
   tmeasurements: Measurement[];
 }
 
@@ -19,6 +22,9 @@ export interface Measurement<T = string | number | any> {
   mvalidtime: string; // $date-time
   mtransactiontime: string; // $date-time
   mperiod: number;
+  /**
+   * Important: Nested objects are not available when you use flat as representation, refer to them directly instead.
+   */
   mprovenance: Provenance;
 }
 

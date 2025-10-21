@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import { AirQuality, AirQualityLevel } from "./AirQuality";
+import { AirQuality_Flat, AirQualityLevel } from "./AirQuality";
 import { AirQualityShort, AirQualityShortValue } from "./AirQualityShort";
 
 export class AirQualityUtils {
@@ -11,7 +11,7 @@ export class AirQualityUtils {
   /**
    *
    */
-  static convertToShortInfo(dataArr: AirQuality[]): AirQualityShort[] {
+  static convertToShortInfo(dataArr: AirQuality_Flat[]): AirQualityShort[] {
     const shortArr: AirQualityShort[] = [];
     for (const item of dataArr) {
       shortArr.push({
