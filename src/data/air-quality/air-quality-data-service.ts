@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { ListResponseV2 } from "../ListResponse";
-import { AirQuality } from "./AirQuality";
+import { AirQuality_Flat } from "./AirQuality";
 import { AirQualityUtils } from "./air-quality.utils";
 import { AirQualityShort } from "./AirQualityShort";
 import { getAssetPath } from "../../utils/asset-path";
@@ -19,8 +19,8 @@ export class AirQualityDataService {
 
   getAirQuality(): Promise<AirQualityShort[]> {
 
-    return fetch(`https://mobility.api.opendatahub.com/v2/flat/EnvironmentStation/NO2-Alphasense_processed_rating/latest?origin=${ORIGIN}&pagesize=-1`)
-      .then(r => r.json() as Promise<ListResponseV2<AirQuality>>)
+    return fetch(`https://mobility.api.opendatahub.com/v2/flat,node/EnvironmentStation/*/latest?where=tname.eq.EAQI-NO2&origin=${ORIGIN}&pagesize=-1`)
+      .then(r => r.json() as Promise<ListResponseV2<AirQuality_Flat>>)
       .then(r => r.data)
       .then(r => AirQualityUtils.convertToShortInfo(r))
       .then(r => {

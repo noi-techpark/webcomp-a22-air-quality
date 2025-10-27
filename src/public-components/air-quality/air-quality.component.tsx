@@ -290,6 +290,9 @@ export class AirQualityComponent implements StencilComponent {
         <div class="legend__item air-quality--5">
           <div class="legend__item-content air-quality-contrast--5">{this.languageService.translate('app.air.quality--5')}</div>
         </div>
+        <div class="legend__item air-quality--6">
+          <div class="legend__item-content air-quality-contrast--6">{this.languageService.translate('app.air.quality--6')}</div>
+        </div>
       </div>
     </div>);
   }

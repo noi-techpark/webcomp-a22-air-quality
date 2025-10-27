@@ -43,49 +43,58 @@
 
 
   /**
-   * @prop --color-air-very-good: Color for 'very good' air quality
-   */
-  --color-air-very-good: #04F42C;
-  /**
-   * @prop --color-air-very-good-contrast: Contrast color for 'very good' air quality
-   */
-  --color-air-very-good-contrast: #333333;
-
-  /**
    * @prop --color-air-good: Color for 'good' air quality
    */
-  --color-air-good: #ECED1F;
+  --color-air-good: #50f0e6;
   /**
-   * @prop --color-air-good-contrast: Contrast color for 'good' air quality
+   * @prop --color-air-very-good-contrast: Contrast color for 'good' air quality
    */
   --color-air-good-contrast: #333333;
 
   /**
-   * @prop --color-air-pretty-good: Color for 'pretty good' air quality
+   * @prop --color-air-fair: Color for 'fair' air quality
    */
-  --color-air-pretty-good: #FF7F2C;
+  --color-air-fair: #50ccaa;
   /**
-   * @prop --color-air-pretty-good-contrast: Contrast color for 'pretty good' air quality
+   * @prop --color-air-fair-contrast: Contrast color for 'fair' air quality
    */
-  --color-air-pretty-good-contrast: #FFFFFF;
+  --color-air-fair-contrast: #EEE;
 
   /**
-   * @prop --color-air-bad: Color for 'bad' air quality
+   * @prop --color-air-moderate: Color for 'moderate' air quality
    */
-  --color-air-bad: #D375F8;
+  --color-air-moderate: #f0e641;
   /**
-   * @prop ---color-air-bad-contrast: Contrast color for 'bad' air quality
+   * @prop --color-air-moderate-contrast: Contrast color for 'moderate' air quality
    */
-  --color-air-bad-contrast: #FFFFFF;
+  --color-air-moderate-contrast: #333333;
 
   /**
-   * @prop --color-air-very-bad: Color for 'very bad' air quality
+   * @prop --color-air-poor: Color for 'poor' air quality
    */
-  --color-air-very-bad: #FF1731;
+  --color-air-poor: #ff5050;
   /**
-   * @prop ---color-air-very-bad-contrast: Contrast color for 'very bad' air quality
+   * @prop ---color-air-poor-contrast: Contrast color for 'poor' air quality
    */
-  --color-air-very-bad-contrast: #FFFFFF;
+  --color-air-poor-contrast: #EEE;
+
+  /**
+   * @prop --color-air-very-poor: Color for 'very poor' air quality
+   */
+  --color-air-very-poor: #960032;
+  /**
+   * @prop ---color-air-very-poor-contrast: Contrast color for 'very poor' air quality
+   */
+  --color-air-very-poor-contrast: #EEE;
+
+  /**
+   * @prop --color-air-extremely-poor: Color for 'extremely poor' air quality
+   */
+  --color-air-extremely-poor: #7d2181;
+  /**
+   * @prop ---color-air-extremely-poor-contrast: Contrast color for 'extremely poor' air quality
+   */
+  --color-air-extremely-poor-contrast: #EEE;
 
   /**
    * @prop --color-air-unknown: Color for unknown/missing air quality
@@ -255,7 +264,11 @@ noi-map {
 .noi-marker {
   line-height: 0;
   font-size: 1em;
+  height: 24px;
+  width: 24px;
   background: currentColor;
+  border-radius: 50%;
+  border: 2px solid var(--color-background);
   /*position: relative; < affects icon position */
 
   display: flex;
@@ -264,7 +277,8 @@ noi-map {
 }
 
 .noi-marker noi-icon {
-  color: #0068B4;
+  /*color: #0068B4;*/
+  color: currentColor;
 }
 
 /*
@@ -278,7 +292,7 @@ noi-map {
 .legend {
   padding: 8px 12px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   background: var(--color-footer);
   color: var(--color-text);
@@ -309,42 +323,50 @@ noi-map {
 }
 
 .air-quality--1 {
-  color: var(--color-air-very-good);
-}
-
-.air-quality--2 {
   color: var(--color-air-good);
 }
 
+.air-quality--2 {
+  color: var(--color-air-fair);
+}
+
 .air-quality--3 {
-  color: var(--color-air-pretty-good);
+  color: var(--color-air-moderate);
 }
 
 .air-quality--4 {
-  color: var(--color-air-bad);
+  color: var(--color-air-poor);
 }
 
 .air-quality--5 {
-  color: var(--color-air-very-bad);
+  color: var(--color-air-very-poor);
+}
+
+.air-quality--6 {
+  color: var(--color-air-extremely-poor);
 }
 
 /** air quality contrast **/
 .air-quality-contrast--1 {
-  color: var(--color-air-very-good-contrast);
-}
-
-.air-quality-contrast--2 {
   color: var(--color-air-good-contrast);
 }
 
+.air-quality-contrast--2 {
+  color: var(--color-air-fair-contrast);
+}
+
 .air-quality-contrast--3 {
-  color: var(--color-air-pretty-good-contrast);
+  color: var(--color-air-moderate-contrast);
 }
 
 .air-quality-contrast--4 {
-  color: var(--color-air-bad-contrast);
+  color: var(--color-air-poor-contrast);
 }
 
 .air-quality-contrast--5 {
-  color: var(--color-air-very-bad-contrast);
+  color: var(--color-air-very-poor-contrast);
+}
+
+.air-quality-contrast--6 {
+  color: var(--color-air-extremely-poor-contrast);
 }

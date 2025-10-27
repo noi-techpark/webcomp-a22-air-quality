@@ -25,16 +25,18 @@ A responsive webcomponent for showing travel times on Brennerlec A22 road
       - [--color-background](#--color-background)
       - [--color-footer](#--color-footer)
       - [--map-line-color](#--map-line-color)
-      - [--color-air-very-good](#--color-air-very-good)
-      - [--color-air-very-good-contrast](#--color-air-very-good-contrast)
       - [--color-air-good](#--color-air-good)
       - [--color-air-good-contrast](#--color-air-good-contrast)
-      - [--color-air-pretty-good](#--color-air-pretty-good)
-      - [--color-air-pretty-good-contrast](#--color-air-pretty-good-contrast)
-      - [--color-air-bad](#--color-air-bad)
-      - [--color-air-bad-contrast](#--color-air-bad-contrast)
-      - [--color-air-very-bad](#--color-air-very-bad)
-      - [--color-air-very-bad-contrast](#--color-air-very-bad-contrast)
+      - [--color-air-fair](#--color-air-fair)
+      - [--color-air-fair-contrast](#--color-air-fair-contrast)
+      - [--color-air-moderate](#--color-air-moderate)
+      - [--color-air-moderate-contrast](#--color-air-moderate-contrast)
+      - [--color-air-poor](#--color-air-poor)
+      - [--color-air-poor-contrast](#--color-air-poor-contrast)
+      - [--color-air-very-poor](#--color-air-very-poor)
+      - [--color-air-very-poor-contrast](#--color-air-very-poor-contrast)
+      - [--color-air-extremely-poor](#--color-air-extremely-poor)
+      - [--color-air-extremely-poor-contrast](#--color-air-extremely-poor-contrast)
       - [--color-air-unknown](#--color-air-unknown)
       - [--scrollbar-color](#--scrollbar-color)
       - [--scrollbar-bg](#--scrollbar-bg)
@@ -129,20 +131,23 @@ noi-a22-air-quality.dark {
   --scrollbar-color: #CCC;
   --scrollbar-bg: #333;
 
-  --color-air-very-good: #159b60;
-  --color-air-very-good-contrast: #EEE;
-
-  --color-air-good: #6c9a0b;
+  --color-air-good: #36a39c;
   --color-air-good-contrast: #EEE;
 
-  --color-air-pretty-good: #9a720a;
-  --color-air-pretty-good-contrast: #EEE;
+  --color-air-fair: #327f6a;
+  --color-air-fair-contrast: #EEE;
 
-  --color-air-bad: #9a4c1a;
-  --color-air-bad-contrast: #EEE;
+  --color-air-moderate: #a39c2c;
+  --color-air-moderate-contrast: #EEE;
 
-  --color-air-very-bad: #9a1322;
-  --color-air-very-bad-contrast: #EEE;
+  --color-air-poor: #b237;
+  --color-air-poor-contrast: #EEE;
+
+  --color-air-very-poor: #490018;
+  --color-air-very-poor-contrast: #EEE;
+
+  --color-air-extremely-poor: #320d34;
+  --color-air-extremely-poor-contrast: #EEE;
 }
 
 noi-a22-air-quality.dark::part(marker){
@@ -206,79 +211,88 @@ Map line color. Default is:
 --map-line-color: #3a9c77;
 ```
 
-#### --color-air-very-good
+####  --color-air-good
 
-Color for 'very good' air quality. Default is:
+Color for 'good' air quality
 ```css
---color-air-very-good: #04F42C;
+--color-air-good: #50f0e6;
 ```
 
-#### --color-air-very-good-contrast
+####  --color-air-good-contrast
 
-Contrast color for 'very good' air quality. Default is:
+Contrast color for 'good' air quality
 ```css
---color-air-very-good-contrast: #333333;
+--color-air-good-contrast: #333333;
 ```
 
-#### --color-air-good
+####  --color-air-fair
 
-Color for 'good' air quality. Default is:
+Color for 'fair' air quality
 ```css
---color-air-good: #ECED1F;
+--color-air-fair: #50ccaa;
 ```
 
-#### --color-air-good-contrast
+####  --color-air-fair-contrast
 
-Contrast color for 'good' air quality. Default is:
+Contrast color for 'fair' air quality
 ```css
-  --color-air-good-contrast: #333333;
+--color-air-fair-contrast: #EEE;
 ```
 
-#### --color-air-pretty-good
+####  --color-air-moderate
 
-Color for 'pretty good' air quality. Default is:
+Color for 'moderate' air quality
 ```css
---color-air-pretty-good: #FF7F2C;
+--color-air-moderate: #f0e641;
 ```
 
-#### --color-air-pretty-good-contrast
+####  --color-air-moderate-contrast
 
-Contrast color for 'pretty good' air quality. Default is:
-
+Contrast color for 'moderate' air quality
 ```css
---color-air-pretty-good-contrast: #FFFFFF;
+--color-air-moderate-contrast: #333333;
 ```
 
-#### --color-air-bad
+####  --color-air-poor
 
-Color for 'bad' air quality. Default is:
-
+Color for 'poor' air quality
 ```css
---color-air-bad: #D375F8;
+--color-air-poor: #ff5050;
 ```
 
-#### --color-air-bad-contrast
+####  --color-air-poor-contrast
 
-Contrast color for 'bad' air quality. Default is:
-
+Contrast color for 'poor' air quality
 ```css
---color-air-bad-contrast: #FFFFFF;
+--color-air-poor-contrast: #EEE;
 ```
 
-#### --color-air-very-bad
+####  --color-air-very-poor
 
-Color for 'very bad' air quality. Default is:
-
+Color for 'very poor' air quality
 ```css
---color-air-very-bad: #FF1731;
+--color-air-very-poor: #960032;
 ```
 
-#### --color-air-very-bad-contrast
+####  --color-air-very-poor-contrast
 
-Contrast color for 'very bad' air quality. Default is:
-
+Contrast color for 'very poor' air quality
 ```css
---color-air-very-bad-contrast: #FFFFFF;
+--color-air-very-poor-contrast: #EEE;
+```
+
+####  --color-air-extremely-poor
+
+Color for 'extremely poor' air quality
+```css
+--color-air-extremely-poor: #7d2181;
+```
+
+####  --color-air-extremely-poor-contrast
+
+Contrast color for 'extremely poor' air quality
+```css
+--color-air-extremely-poor-contrast: #EEE;
 ```
 
 #### --color-air-unknown

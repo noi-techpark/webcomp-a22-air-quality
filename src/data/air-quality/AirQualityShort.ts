@@ -27,10 +27,11 @@ export interface AirQualityShort {
 
 export enum AirQualityShortValue {
   UNKNOWN = 0,
-  VERY_GOOD = 1,
-  GOOD = 2,
-  PRETTY_GOOD = 3,
-  BAD = 4,
-  VERY_BAD = 5,
+  GOOD = 1,
+  FAIR = 2,
+  MODERATE = 3,
+  POOR = 4,
+  VERY_POOR = 5,
+  EXTREMELY_POOR = 6,
 }
 

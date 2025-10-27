@@ -12,24 +12,25 @@ describe("AirQualityUtils", () => {
   describe('getLevel', () => {
 
     it('should calculate level', () => {
-      expect(AirQualityUtils.getLevel("bad")).toBe(AirQualityShortValue.BAD);
-      expect(AirQualityUtils.getLevel("very bad")).toBe(AirQualityShortValue.VERY_BAD);
       expect(AirQualityUtils.getLevel("good")).toBe(AirQualityShortValue.GOOD);
-      expect(AirQualityUtils.getLevel("pretty good")).toBe(AirQualityShortValue.PRETTY_GOOD);
-      expect(AirQualityUtils.getLevel("very good")).toBe(AirQualityShortValue.VERY_GOOD);
+      expect(AirQualityUtils.getLevel("fair")).toBe(AirQualityShortValue.FAIR);
+      expect(AirQualityUtils.getLevel("moderate")).toBe(AirQualityShortValue.MODERATE);
+      expect(AirQualityUtils.getLevel("poor")).toBe(AirQualityShortValue.POOR);
+      expect(AirQualityUtils.getLevel("very poor")).toBe(AirQualityShortValue.VERY_POOR);
+      expect(AirQualityUtils.getLevel("extremely poor")).toBe(AirQualityShortValue.EXTREMELY_POOR);
     });
 
     it('should calculate level: capital letters', () => {
-      expect(AirQualityUtils.getLevel("bad")).toBe(AirQualityShortValue.BAD);
-      expect(AirQualityUtils.getLevel("Bad" as any)).toBe(AirQualityShortValue.BAD);
-      expect(AirQualityUtils.getLevel("BAD" as any)).toBe(AirQualityShortValue.BAD);
+      expect(AirQualityUtils.getLevel("good")).toBe(AirQualityShortValue.GOOD);
+      expect(AirQualityUtils.getLevel("Good" as any)).toBe(AirQualityShortValue.GOOD);
+      expect(AirQualityUtils.getLevel("GOOD" as any)).toBe(AirQualityShortValue.GOOD);
     });
 
     it('should calculate level: spaces', () => {
-      expect(AirQualityUtils.getLevel("pretty good")).toBe(AirQualityShortValue.PRETTY_GOOD);
-      expect(AirQualityUtils.getLevel(" pretty good" as any)).toBe(AirQualityShortValue.PRETTY_GOOD);
-      expect(AirQualityUtils.getLevel(" pretty good " as any)).toBe(AirQualityShortValue.PRETTY_GOOD);
-      expect(AirQualityUtils.getLevel("pretty  good" as any)).toBe(AirQualityShortValue.PRETTY_GOOD);
+      expect(AirQualityUtils.getLevel("very poor")).toBe(AirQualityShortValue.VERY_POOR);
+      expect(AirQualityUtils.getLevel(" very poor" as any)).toBe(AirQualityShortValue.VERY_POOR);
+      expect(AirQualityUtils.getLevel(" very poor " as any)).toBe(AirQualityShortValue.VERY_POOR);
+      expect(AirQualityUtils.getLevel("very  poor" as any)).toBe(AirQualityShortValue.VERY_POOR);
     });
 
     it('should calculate level: unknown', () => {

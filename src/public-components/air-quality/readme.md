@@ -3,8 +3,7 @@ SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
 
 SPDX-License-Identifier: CC0-1.0
 -->
-
-# noi-road-webcam
+# noi-a22-air-quality
 
 
 
@@ -13,22 +12,21 @@ SPDX-License-Identifier: CC0-1.0
 
 ## Overview
 
-Road webcameras component
+Road air quality component
 
 ## Properties
 
-| Property         | Attribute         | Description          | Type                                          | Default  |
-| ---------------- | ----------------- | -------------------- | --------------------------------------------- | -------- |
-| `language`       | `language`        | Language             | `string`                                      | `'en'`   |
-| `layout`         | `layout`          | Layout appearance    | `"auto" \| "desktop" \| "mobile" \| "tablet"` | `'auto'` |
-| `reloadInterval` | `reload-interval` | Data reload interval | `number`                                      | `60000`  |
+| Property   | Attribute  | Description       | Type                                          | Default  |
+| ---------- | ---------- | ----------------- | --------------------------------------------- | -------- |
+| `language` | `language` | Language          | `string`                                      | `'en'`   |
+| `layout`   | `layout`   | Layout appearance | `"auto" \| "desktop" \| "mobile" \| "tablet"` | `'auto'` |
 
 
 ## Methods
 
 ### `refreshData() => Promise<void>`
 
-Reload camera data (basically, it's images)
+Reload camera data
 
 #### Returns
 
@@ -39,51 +37,62 @@ Type: `Promise<void>`
 
 ## Shadow Parts
 
-| Part      | Description  |
-| --------- | ------------ |
-| `"list"`  | camera list  |
-| `"map"`   | Map          |
-| `"popup"` | Popup dialog |
+| Part            | Description     |
+| --------------- | --------------- |
+| `"footer"`      |                 |
+| `"list"`        | stations list   |
+| `"map"`         | Map             |
+| `"marker"`      | Map marker      |
+| `"marker-icon"` | Map marker icon |
+| `"popup"`       | Popup dialog    |
 
 
 ## CSS Custom Properties
 
-| Name                    | Description                 |
-| ----------------------- | --------------------------- |
-| `--color-background`    | Background color            |
-| `--color-primary`       | Primary color               |
-| `--color-primary-rgb`   | Primary color in RGB format |
-| `--color-secondary`     | Secondary color             |
-| `--color-text`          | Text color                  |
-| `--map-marker-color`    | Map marker color            |
-| `--map-marker-color-bg` | Map marker background       |
-| `--scrollbar-bg`        | Scrollbar background color  |
-| `--scrollbar-color`     | Scrollbar thumb color       |
+| Name                                   | Description                                     |
+| -------------------------------------- | ----------------------------------------------- |
+| `---color-air-extremely-poor-contrast` | Contrast color for 'extremely poor' air quality |
+| `---color-air-poor-contrast`           | Contrast color for 'poor' air quality           |
+| `---color-air-very-poor-contrast`      | Contrast color for 'very poor' air quality      |
+| `--color-air-extremely-poor`           | Color for 'extremely poor' air quality          |
+| `--color-air-fair`                     | Color for 'fair' air quality                    |
+| `--color-air-fair-contrast`            | Contrast color for 'fair' air quality           |
+| `--color-air-good`                     | Color for 'good' air quality                    |
+| `--color-air-moderate`                 | Color for 'moderate' air quality                |
+| `--color-air-moderate-contrast`        | Contrast color for 'moderate' air quality       |
+| `--color-air-poor`                     | Color for 'poor' air quality                    |
+| `--color-air-unknown`                  | Color for unknown/missing air quality           |
+| `--color-air-very-good-contrast`       | Contrast color for 'good' air quality           |
+| `--color-air-very-poor`                | Color for 'very poor' air quality               |
+| `--color-background`                   | Background color                                |
+| `--color-footer`                       | Footer background color                         |
+| `--color-primary`                      | Primary color                                   |
+| `--color-primary-rgb`                  | Primary color in RGB format                     |
+| `--color-secondary`                    | Secondary color                                 |
+| `--color-tertiary`                     | Third color                                     |
+| `--color-text`                         | Text color                                      |
+| `--map-line-color`                     | Map line color                                  |
+| `--scrollbar-bg`                       | Scrollbar background color                      |
+| `--scrollbar-color`                    | Scrollbar thumb color                           |
 
 
 ## Dependencies
 
 ### Depends on
 
-- [noi-road-webcam-list](./partials/air-quality-list)
-- [noi-brennerlec-map](../../blocks/map)
-- [noi-backdrop](../../blocks/backdrop)
-- [noi-button](../blocks/button)
-- [noi-icon](../blocks/icon)
+- [noi-air-quality-list](./partials/air-quality-list)
+- [noi-map](../../blocks/map)
 
 ### Graph
 ```mermaid
 graph TD;
-  noi-brennerlec --> noi-road-webcam-list
-  noi-brennerlec --> noi-brennerlec-map
-  noi-brennerlec --> noi-backdrop
-  noi-brennerlec --> noi-button
-  noi-brennerlec --> noi-icon
-  noi-road-webcam-list --> noi-icon
-  noi-road-webcam-list --> noi-input
+  noi-a22-air-quality --> noi-air-quality-list
+  noi-a22-air-quality --> noi-map
+  noi-air-quality-list --> noi-icon
+  noi-air-quality-list --> noi-input
   noi-input --> noi-icon
   noi-input --> noi-button
-  style noi-brennerlec fill:#f9f,stroke:#333,stroke-width:4px
+  style noi-a22-air-quality fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

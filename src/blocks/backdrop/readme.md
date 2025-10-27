@@ -37,19 +37,6 @@ SPDX-License-Identifier: CC0-1.0
 | `--backdrop-filter` | backdrop filter |
 
 
-## Dependencies
-
-### Used by
-
- - [noi-a22-traffic-forecast](../../a22-traffic-forecast)
-
-### Graph
-```mermaid
-graph TD;
-  noi-a22-traffic-forecast --> noi-backdrop
-  style noi-backdrop fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

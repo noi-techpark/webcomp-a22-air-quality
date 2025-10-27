@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import { AirQuality, AirQualityLevel } from "./AirQuality";
+import { AirQuality_Flat, AirQualityLevel } from "./AirQuality";
 import { AirQualityShort, AirQualityShortValue } from "./AirQualityShort";
 
 export class AirQualityUtils {
@@ -11,15 +11,17 @@ export class AirQualityUtils {
   /**
    *
    */
-  static convertToShortInfo(dataArr: AirQuality[]): AirQualityShort[] {
+  static convertToShortInfo(dataArr: AirQuality_Flat[]): AirQualityShort[] {
     const shortArr: AirQualityShort[] = [];
     for (const item of dataArr) {
+      const idx = dataArr.indexOf(item);
       shortArr.push({
         scode: item.scode,
         sname: AirQualityUtils.normalizeName(item.sname),
         tdescription: item.tdescription,
         mvalue: item.mvalue,
-        value: AirQualityUtils.getLevel(item.mvalue),
+        // value: AirQualityUtils.getLevel(item.mvalue),
+        value: idx % 6 + 1,
         mvalidtime: item.mvalidtime,
         validtime: new Date(item.mvalidtime),
         validtimeLocalized: AirQualityUtils.formatDate(new Date(item.mvalidtime)),
@@ -40,18 +42,22 @@ export class AirQualityUtils {
    *
    */
   static getLevel(level: AirQualityLevel): AirQualityShortValue {
-    const levelNormalized = (level || '').trim().toLowerCase().replace(/\s+/g, ' ') as AirQualityLevel;
+    const levelNormalized = (level || '').trim()
+      .toLowerCase()
+      .replace(/\s+/g, ' ') as AirQualityLevel;
     switch (levelNormalized) {
-      case "very good":
-        return AirQualityShortValue.VERY_GOOD;
       case "good":
         return AirQualityShortValue.GOOD;
-      case "pretty good":
-        return AirQualityShortValue.PRETTY_GOOD;
-      case "bad":
-        return AirQualityShortValue.BAD;
-      case "very bad":
-        return AirQualityShortValue.VERY_BAD;
+      case "fair":
+        return AirQualityShortValue.FAIR;
+      case "moderate":
+        return AirQualityShortValue.MODERATE;
+      case "poor":
+        return AirQualityShortValue.POOR;
+      case "very poor":
+        return AirQualityShortValue.VERY_POOR;
+      case "extremely poor":
+        return AirQualityShortValue.EXTREMELY_POOR;
       default:
         console.warn('Unknown level', level);
         return AirQualityShortValue.UNKNOWN;
