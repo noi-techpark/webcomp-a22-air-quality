@@ -19,7 +19,7 @@ export class AirQualityDataService {
 
   getAirQuality(): Promise<AirQualityShort[]> {
 
-    return fetch(`https://mobility.api.opendatahub.com/v2/flat,node/EnvironmentStation/*/latest?where=tname.eq.EAQI-NO2&where=sactive.eq.TRUE&origin=${ORIGIN}&pagesize=-1`)
+    return fetch(`https://mobility.api.opendatahub.com/v2/flat,node/EnvironmentStation/*/latest?where=tname.eq.EAQI-NO2&where=sactive.eq.TRUE&origin=${ORIGIN}&limit=-1`)
       .then(r => r.json() as Promise<ListResponseV2<AirQuality_Flat>>)
       .then(r => r.data)
       .then(r => AirQualityUtils.convertToShortInfo(r))
