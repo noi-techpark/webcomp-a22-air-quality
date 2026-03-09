@@ -316,14 +316,24 @@ noi-map {
   display: none;
 }
 
-.legend__item-content-mobile {
+.legend__item-threshold {
+  display: none;
+}
+.legend.legend--threshold .legend__item-threshold {
+  display: initial;
+}
+:host(.layout--mobile) .legend.legend--threshold .legend__item-threshold {
+  display: none;
+}
+
+
+.legend__item-threshold-mobile {
   text-align: center;
   display: none;
   font-size: 0.75em;
   opacity: 0.8;
 }
-
-:host(.layout--mobile) .legend.legend--threshold .legend__item-content-mobile {
+:host(.layout--mobile) .legend.legend--threshold .legend__item-threshold-mobile {
   display: initial;
 }
 
