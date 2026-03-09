@@ -75,6 +75,15 @@
         }
       },
       {
+        "key": "legend-hide-threshold",
+        "type": "bool",
+        "label": "Hide legend threshold values",
+        "required": false,
+        "options": {
+          "default": "false"
+        }
+      },
+      {
         "key": "style",
         "type": "text",
         "label": "CSS style definition",
