@@ -280,38 +280,44 @@ export class AirQualityComponent implements StencilComponent {
 
   _renderFooter() {
     return (<div class="layout__footer" part="footer">
-      <div class="legend">
+      <div class={'legend ' + (this.legendHideThreshold ? '' : 'legend--threshold')}>
         <div class="legend__item air-quality--1">
+          <div class="legend__item-content-mobile air-quality-contrast--1">0 - 40</div>
           <div class="legend__item-content air-quality-contrast--1">
             {this.legendHideThreshold ? '' : '(0 - 40) '}
             {this.languageService.translate('app.air.quality--1')}
           </div>
         </div>
         <div class="legend__item air-quality--2">
-            <div class="legend__item-content air-quality-contrast--2">
-              {this.legendHideThreshold ? '' : '(40-90) '}
-              {this.languageService.translate('app.air.quality--2')}
-            </div>
+          <div class="legend__item-content-mobile air-quality-contrast--2">40-90</div>
+          <div class="legend__item-content air-quality-contrast--2">
+            {this.legendHideThreshold ? '' : '(40-90) '}
+            {this.languageService.translate('app.air.quality--2')}
+          </div>
         </div>
         <div class="legend__item air-quality--3">
+          <div class="legend__item-content-mobile air-quality-contrast--3">90-120</div>
           <div class="legend__item-content air-quality-contrast--3">
             {this.legendHideThreshold ? '' : '(90-120) '}
             {this.languageService.translate('app.air.quality--3')}
           </div>
         </div>
         <div class="legend__item air-quality--4">
+          <div class="legend__item-content-mobile air-quality-contrast--4">120-230</div>
           <div class="legend__item-content air-quality-contrast--4">
             {this.legendHideThreshold ? '' : '(120-230) '}
             {this.languageService.translate('app.air.quality--4')}
           </div>
         </div>
         <div class="legend__item air-quality--5">
+          <div class="legend__item-content-mobile air-quality-contrast--5">230-340</div>
           <div class="legend__item-content air-quality-contrast--5">
             {this.legendHideThreshold ? '' : '(230-340) '}
             {this.languageService.translate('app.air.quality--5')}
           </div>
         </div>
         <div class="legend__item air-quality--6">
+          <div class="legend__item-content-mobile air-quality-contrast--6">340-1000</div>
           <div class="legend__item-content air-quality-contrast--6">
             {this.legendHideThreshold ? '' : '(340-1000) '}
             {this.languageService.translate('app.air.quality--6')}
