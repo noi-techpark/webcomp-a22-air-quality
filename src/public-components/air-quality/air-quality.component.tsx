@@ -284,43 +284,43 @@ export class AirQualityComponent implements StencilComponent {
         <div class="legend__item air-quality--1">
           <div class="legend__item-threshold-mobile air-quality-contrast--1">0 - 40</div>
           <div class="legend__item-content air-quality-contrast--1">
-            <span class="legend__item-threshold">(0 - 40) </span>
             {this.languageService.translate('app.air.quality--1')}
+            <span class="legend__item-threshold"> (0 - 40 µg/m³)</span>
           </div>
         </div>
         <div class="legend__item air-quality--2">
-          <div class="legend__item-threshold-mobile air-quality-contrast--2">40-90</div>
+        <div class="legend__item-threshold-mobile air-quality-contrast--2">40-90</div>
           <div class="legend__item-content air-quality-contrast--2">
-            <span class="legend__item-threshold">(40-90) </span>
             {this.languageService.translate('app.air.quality--2')}
+            <span class="legend__item-threshold"> (40-90 µg/m³)</span>
           </div>
         </div>
         <div class="legend__item air-quality--3">
-        <div class="legend__item-threshold-mobile air-quality-contrast--3">90-120</div>
+          <div class="legend__item-threshold-mobile air-quality-contrast--3">90-120</div>
           <div class="legend__item-content air-quality-contrast--3">
-            <span class="legend__item-threshold">(90-120) </span>
             {this.languageService.translate('app.air.quality--3')}
+            <span class="legend__item-threshold"> (90-120 µg/m³)</span>
           </div>
         </div>
         <div class="legend__item air-quality--4">
-          <div class="legend__item-threshold-mobile air-quality-contrast--4">120-230</div>
+        <div class="legend__item-threshold-mobile air-quality-contrast--4">120-230</div>
           <div class="legend__item-content air-quality-contrast--4">
-            <span class="legend__item-threshold">(120-230) </span>
             {this.languageService.translate('app.air.quality--4')}
+            <span class="legend__item-threshold"> (120-230 µg/m³)</span>
           </div>
         </div>
         <div class="legend__item air-quality--5">
-          <div class="legend__item-threshold-mobile air-quality-contrast--5">230-340</div>
+        <div class="legend__item-threshold-mobile air-quality-contrast--5">230-340</div>
           <div class="legend__item-content air-quality-contrast--5">
-            <span class="legend__item-threshold">(230-340) </span>
             {this.languageService.translate('app.air.quality--5')}
+            <span class="legend__item-threshold"> (230-340 µg/m³)</span>
           </div>
         </div>
         <div class="legend__item air-quality--6">
-          <div class="legend__item-threshold-mobile air-quality-contrast--6">340-1000</div>
+        <div class="legend__item-threshold-mobile air-quality-contrast--6">340-1000</div>
           <div class="legend__item-content air-quality-contrast--6">
-            <span class="legend__item-threshold"> (340-1000) </span>
             {this.languageService.translate('app.air.quality--6')}
+            <span class="legend__item-threshold"> (340-1000 µg/m³)</span>
           </div>
         </div>
       </div>
