@@ -80,7 +80,7 @@
         "label": "Hide legend threshold values",
         "required": false,
         "options": {
-          "default": "false"
+          "default": false
         }
       },
       {
